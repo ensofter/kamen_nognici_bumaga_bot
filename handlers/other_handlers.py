@@ -1,10 +1,11 @@
 from aiogram import Router
 from aiogram.types import Message
 
+from lexicon.lexicon_ru import LEXICON_RU
 
 router = Router()
 
 
 @router.message()
 async def handle_every_message(message: Message):
-    await message.answer('Ответ на любой твой вопрос')
+    await message.answer(text=LEXICON_RU['other_answer'])
